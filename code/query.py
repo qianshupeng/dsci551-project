@@ -1,2 +1,2 @@
-# query_generator.py
+# query.py
 # take patterns, return queries; give sample queries
