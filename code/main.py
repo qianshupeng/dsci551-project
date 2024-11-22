@@ -1,15 +1,21 @@
+# main.py
+# interface and main running logic of ChatDB
+
 import sys
 import os
 
 
 if __name__ == "__main__":
-    print("Welcome to ChatDB! \nAuthor: Qianshu Peng")
+    print("Welcome to ChatDB! \nBy Qianshu Peng")
+
+    print("Initialization...")
     while True:
-        print("\nOptions: [1] Explore Database \n[2] Sample Queries \n[3] Upload Your Database \n[4] Exit")
+        print("\nOptions: \n[1] Explore Database \n[2] Sample Queries \n[3] Upload Your Database \n[4] Exit")
+        print("At any time, type \"Back\" to go back and \"Menu\" to go to the main menu.")
         choice1 = input("Select an option: ")
 
         if choice1 == "1":
-            print("\nChoose the Database: [1] sales")
+            print("\nChoose a Built-in Database: [1] sales")
             choice2 = input("Select a table: ")
 
         elif choice1 == "2":
@@ -24,4 +30,4 @@ if __name__ == "__main__":
             sys.exit()
         
         else:
-            print("Invalid Choice.")
+            print("Invalid Input")
