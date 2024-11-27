@@ -1,5 +1,5 @@
 # config.py
-# for MySQL database configuration
+# For MySQL database configuration
 
 import pymysql
 import os
@@ -7,12 +7,18 @@ import json
 
 CONFIG_FILE = "db_config.json"
 
-def save_db_config():
+def save_db_config(host=None, user=None, password=None):
     """Prompt user for MySQL connection details and save them to a config file."""
+    if host == None:
+        host = input("Enter MySQL host: ")
+    if user == None:
+        user = input("Enter MySQL username: ")
+    if password == None:
+        password = input("Enter MySQL password: ")
     config = {
-        "host": input("Enter MySQL host (e.g., 'localhost'): "),
-        "user": input("Enter MySQL username: "),
-        "password": input("Enter MySQL password: ")
+        "host": host,
+        "user": user,
+        "password": password
     }
     with open(CONFIG_FILE, "w") as f:
         json.dump(config, f)

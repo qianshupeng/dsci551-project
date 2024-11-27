@@ -1,0 +1,29 @@
+{
+    "columns": [
+        "EnrollmentID",
+        "StudentID",
+        "CourseID",
+        "Semester",
+        "Grade"
+    ],
+    "primary_key": [
+        "EnrollmentID"
+    ],
+    "foreign_key": "None",
+    "data_types": [
+        "INT",
+        "INT",
+        "INT",
+        "VARCHAR(255)",
+        "VARCHAR(255)"
+    ],
+    "quantitative": [
+        "EnrollmentID",
+        "StudentID",
+        "CourseID"
+    ],
+    "categorical": [
+        "Semester",
+        "Grade"
+    ]
+}

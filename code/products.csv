@@ -1,0 +1,81 @@
+product_id,unit_price,product_category,product_type,product_detail
+79,3.75,Bakery,Scone,Jumbo Savory Scone
+69,3.25,Bakery,Biscotti,Hazelnut Biscotti
+26,3.0,Coffee,Organic brewed coffee,Brazilian Rg
+34,2.45,Coffee,Premium brewed coffee,Jamaican Coffee River Sm
+47,3.0,Tea,Brewed Green tea,Serenity Green Tea Lg
+59,4.5,Drinking Chocolate,Hot chocolate,Dark chocolate Lg
+35,3.1,Coffee,Premium brewed coffee,Jamaican Coffee River Rg
+50,2.5,Tea,Brewed Black tea,Earl Grey Rg
+29,2.5,Coffee,Gourmet brewed coffee,Columbian Medium Roast Rg
+36,3.75,Coffee,Premium brewed coffee,Jamaican Coffee River Lg
+24,3.0,Coffee,Drip coffee,Our Old Time Diner Blend Lg
+30,3.0,Coffee,Gourmet brewed coffee,Columbian Medium Roast Lg
+38,3.75,Coffee,Barista Espresso,Latte
+43,3.0,Tea,Brewed herbal tea,Lemon Grass Lg
+52,2.5,Tea,Brewed Chai tea,Traditional Blend Chai Rg
+53,3.0,Tea,Brewed Chai tea,Traditional Blend Chai Lg
+54,2.5,Tea,Brewed Chai tea,Morning Sunrise Chai Rg
+75,3.5,Bakery,Pastry,Croissant
+55,4.0,Tea,Brewed Chai tea,Morning Sunrise Chai Lg
+28,2.0,Coffee,Gourmet brewed coffee,Columbian Medium Roast Sm
+32,3.0,Coffee,Gourmet brewed coffee,Ethiopia Rg
+31,2.2,Coffee,Gourmet brewed coffee,Ethiopia Sm
+46,2.5,Tea,Brewed Green tea,Serenity Green Tea Rg
+51,3.0,Tea,Brewed Black tea,Earl Grey Lg
+58,3.5,Drinking Chocolate,Hot chocolate,Dark chocolate Rg
+22,2.0,Coffee,Drip coffee,Our Old Time Diner Blend Sm
+39,4.25,Coffee,Barista Espresso,Latte Rg
+71,3.75,Bakery,Pastry,Chocolate Croissant
+77,3.0,Bakery,Scone,Oatmeal Scone
+45,3.0,Tea,Brewed herbal tea,Peppermint Lg
+44,2.5,Tea,Brewed herbal tea,Peppermint Rg
+25,2.2,Coffee,Organic brewed coffee,Brazilian Sm
+40,3.75,Coffee,Barista Espresso,Cappuccino
+60,3.75,Drinking Chocolate,Hot chocolate,Sustainably Grown Organic Rg
+61,4.75,Drinking Chocolate,Hot chocolate,Sustainably Grown Organic Lg
+73,3.75,Bakery,Pastry,Almond Croissant
+57,3.1,Tea,Brewed Chai tea,Spicy Eye Opener Chai Lg
+27,3.5,Coffee,Organic brewed coffee,Brazilian Lg
+49,3.0,Tea,Brewed Black tea,English Breakfast Lg
+48,2.5,Tea,Brewed Black tea,English Breakfast Rg
+56,2.55,Tea,Brewed Chai tea,Spicy Eye Opener Chai Rg
+23,2.5,Coffee,Drip coffee,Our Old Time Diner Blend Rg
+74,3.5,Bakery,Biscotti,Ginger Biscotti
+37,3.0,Coffee,Barista Espresso,Espresso shot
+33,3.5,Coffee,Gourmet brewed coffee,Ethiopia Lg
+70,3.25,Bakery,Scone,Cranberry Scone
+6,21.0,Coffee beans,Gourmet Beans,Ethiopia
+41,4.25,Coffee,Barista Espresso,Cappuccino Lg
+65,0.8,Flavours,Sugar free syrup,Sugar Free Vanilla syrup
+64,0.8,Flavours,Regular syrup,Hazelnut syrup
+19,6.4,Packaged Chocolate,Drinking Chocolate,Dark chocolate
+9,22.5,Coffee beans,Organic Beans,Organic Decaf Blend
+3,14.75,Coffee beans,Espresso Beans,Espresso Roast
+63,0.8,Flavours,Regular syrup,Carmel syrup
+42,2.5,Tea,Brewed herbal tea,Lemon Grass Rg
+14,8.95,Loose Tea,Black tea,Earl Grey
+18,10.95,Loose Tea,Chai tea,Spicy Eye Opener Chai
+84,0.8,Flavours,Regular syrup,Chocolate syrup
+20,7.6,Packaged Chocolate,Organic Chocolate,Sustainably Grown Organic
+82,12.0,Branded,Housewares,I Need My Bean! Diner mug
+11,8.95,Loose Tea,Herbal tea,Lemon Grass
+87,3.0,Coffee,Barista Espresso,Ouro Brasileiro shot
+1,18.0,Coffee beans,Organic Beans,Brazilian - Organic
+81,28.0,Branded,Clothing,I Need My Bean! T-shirt
+10,10.0,Coffee beans,Green beans,Guatemalan Sustainably Grown
+21,13.33,Packaged Chocolate,Drinking Chocolate,Chili Mayan
+12,8.95,Loose Tea,Herbal tea,Peppermint
+83,14.0,Branded,Housewares,I Need My Bean! Latte cup
+4,20.45,Coffee beans,Espresso Beans,Primo Espresso Roast
+8,45.0,Coffee beans,Premium Beans,Civet Cat
+15,9.25,Loose Tea,Green tea,Serenity Green Tea
+13,8.95,Loose Tea,Black tea,English Breakfast
+2,18.0,Coffee beans,House blend Beans,Our Old Time Diner Blend
+72,2.65,Bakery,Scone,Ginger Scone
+17,9.5,Loose Tea,Chai tea,Morning Sunrise Chai
+76,4.38,Bakery,Biscotti,Chocolate Chip Biscotti
+16,8.95,Loose Tea,Chai tea,Traditional Blend Chai
+7,19.75,Coffee beans,Premium Beans,Jamacian Coffee River
+5,15.0,Coffee beans,Gourmet Beans,Columbian Medium Roast
+78,5.63,Bakery,Scone,Scottish Cream Scone 
