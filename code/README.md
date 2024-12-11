@@ -17,3 +17,4 @@ In your terminal, enter: <br>
 <code>python main.py</code> <br>
 If <code>python</code> does not work for you, try <code>python3</code> or other commands corresponding to your python version.
 
+Then you will enter the ChatDB interface. 
