@@ -21,7 +21,8 @@ If <code>python</code> does not work for you, try <code>python3</code> or other 
 
 Enter your MySQL host, username, and password to connect to local MySQL server and enter ChatDB. 
 
-Then you will enter the ChatDB interface. Follow the instructions on the interface to continue.
+Then you will enter the ChatDB interface. Follow the instructions on the interface to continue. If you get any error message, please check if your environment fulfills all requirements above. 
+
 <br>
 <br>
 
