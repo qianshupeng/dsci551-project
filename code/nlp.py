@@ -5,8 +5,8 @@ import re
 import nltk
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
-# nltk.download('punkt')
-# nltk.download('wordnet')
+nltk.download('punkt')
+nltk.download('wordnet')
 
 def lemmatize_input(input_text):
     """Tokenize and lemmatize the input text."""
