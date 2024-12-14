@@ -19,16 +19,23 @@ def lemmatize_input(input_text):
 
 def execute_query(connection, query):
     """Execute the generated SQL query and print results."""
-    try:
-        print(f"Generated Query:\n{query}")
-        with connection.cursor() as cursor:
-            cursor.execute(query)
-            result = cursor.fetchall()
-            print("\nQuery Result:")
-            for row in result:
-                print(row)
-    except Exception as e:
-        print(f"Error executing query: {e}")
+    print(f"Generated Query:\n{query}")
+    user_input = input("Press Enter to execute the query, or type anything else to cancel: ")
+    if user_input.strip() != "":
+        print("Query execution cancelled.")
+        return
+
+    else:
+        try:
+            
+            with connection.cursor() as cursor:
+                cursor.execute(query)
+                result = cursor.fetchall()
+                print("\nQuery Result:")
+                for row in result:
+                    print(row)
+        except Exception as e:
+            print(f"Error executing query: {e}")
 
 
 def generate_query_from_nlp(connection, table_name, nlp_input):
