@@ -3,36 +3,41 @@
 
 import sys
 import os
+import json
 from config import save_db_config, connect_to_database, load_db_config
 from database import create_database, create_table_from_csv
 from utils import is_valid_file, get_table_name
 from query import explore_database, describe_table, generate_sample_queries
 from nlp import generate_query_from_nlp
 
+HOST = None
+USER = None
+PASSWORD = None
 
-
+CONFIG_FILE = "db_config.json"
 BUILTIN_DATABASE = "builtin_db"
 BUILTIN_DATASETS = [
-     {"path": "./stores.csv", "primary_key": "store_id", 
+     {"path": "../data/stores.csv", "primary_key": "store_id", 
       "foreign_key": "None", 
       "data_types": "INT, VARCHAR(100)"}, 
-     {"path": "./products.csv", "primary_key": "product_id", 
+     {"path": "../data/products.csv", "primary_key": "product_id", 
       "foreign_key": "None", 
       "data_types": "INT, FLOAT, VARCHAR(100), VARCHAR(100), VARCHAR(100)"},
-     {"path": "./transactions.csv", "primary_key": "transaction_id", 
+     {"path": "../data/transactions.csv", "primary_key": "transaction_id", 
       "foreign_key": "store_id: stores(store_id), product_id: products(product_id)", 
       "data_types": "INT, DATE, TIME, INT, INT, INT"}
      ]
-HOST = "localhost"
-USER = "root"
-PASSWORD = "020914@Pqs"
 
 if __name__ == "__main__":
     print("Welcome to ChatDB! \nBy Qianshu Peng")
 
     # initialization built-in database and datasets
     print("Initialization...")
-    save_db_config(HOST, USER, PASSWORD)
+    if not os.path.exists(CONFIG_FILE):
+        save_db_config(HOST, USER, PASSWORD)
+    else:
+        print("Reading MySQL Configuration...")
+        config = load_db_config()
     create_database(BUILTIN_DATABASE)
     connection = connect_to_database(BUILTIN_DATABASE)
 
@@ -68,7 +73,7 @@ if __name__ == "__main__":
                     explore_database(connection)
 
                 elif choice2 == "2":
-                    table_name = input("Enter the table name to describe: ")
+                    table_name = input("Enter the table name: ")
                     describe_table(connection, table_name)
 
                     while True:
@@ -79,7 +84,7 @@ if __name__ == "__main__":
                             generate_sample_queries(connection, table_name)
 
                         elif table_choice == "2":
-                            nlp_input = input("Enter your NLP query: ")
+                            nlp_input = input("Enter your NLP query (check documentation for examples): ")
                             generate_query_from_nlp(connection, table_name, nlp_input)
                             
                         elif table_choice == "3":
@@ -97,8 +102,10 @@ if __name__ == "__main__":
             db_name = input("Enter your database name: ")
             create_database(db_name)
             connection = connect_to_database(db_name)
+            print("Important: If there exists reference relationships (i.e. foreign keys), please enter the file which referencing others after all the referenced ones. ")
             file_path = input("Enter comma-separated list of CSV file pathes (table name will be the file name): ")
             for file in file_path.split(","):
+                file = file.strip()
                 if is_valid_file(file):
                     table_name = get_table_name(file)
                     primary_key = input(f"Enter primary key(s) for table '{table_name}' (comma-separated): ")
