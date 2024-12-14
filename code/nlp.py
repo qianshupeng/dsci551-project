@@ -68,6 +68,17 @@ def generate_query_from_nlp(connection, table_name, nlp_input):
                     sql_func = dct[func]
                     query = f"SELECT `{category}`, {sql_func}(`{metric}`) FROM `{table_name}` GROUP BY `{category}`;"
                     execute_query(connection, query)
+    
+    elif ('count' in lemmatized_input) and ('where' in lemmatized_input):
+        # e.g., "count X where X > 10"
+        match = re.search(r'count (\w+) where (\w+) (>=|<=|>|<|=) (".*"|\d+)', nlp_input)
+        if match:
+            table, column, operator, value = match.groups()
+            value = value.strip('"') if value.startswith('"') else value
+            if not value.isnumeric():
+                value = f"'{value}'"
+            query = f"SELECT COUNT(`{table}`) FROM `{table_name}` WHERE `{column}` {operator} {value};"
+            execute_query(connection, query)
 
     elif 'where' in lemmatized_input:
         # e.g., "A where X greater than 10" or "where X = 'some_value'"
@@ -97,17 +108,6 @@ def generate_query_from_nlp(connection, table_name, nlp_input):
                 execute_query(connection, query)
             else:
                 print("Fail to match.")
-
-    elif 'count' in lemmatized_input:
-        # e.g., "count X where X > 10"
-        match = re.search(r'count (\w+) where (\w+) (>=|<=|>|<|=) (".*"|\d+)', nlp_input)
-        if match:
-            table, column, operator, value = match.groups()
-            value = value.strip('"') if value.startswith('"') else value
-            if not value.isnumeric():
-                value = f"'{value}'"
-            query = f"SELECT COUNT(`{table}`) FROM `{table_name}` WHERE `{column}` {operator} {value};"
-            execute_query(connection, query)
     
     # Common queries for comma-separated columns, "get col1, col2, col3"
     elif any(word in lemmatized_input for word in ['get', 'return', 'retrieve', 'output']):
